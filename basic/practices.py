@@ -1,23 +1,21 @@
 
-#convertir de pesos a dolares 
+#Mayoria de age
+age = int (input("Write your age: "))
+if age < 18:
+    print("Menor de edad ")
 
-peso = int (input("Escribe los pesos: "))
-value_Dollar = 20.53
+else:
+    print("Mayor de edad ")
 
-dollars = peso / value_Dollar
-dollars = round(dollars, 2)
-
-dollars = str(dollars)
-print("Tienes $"+dollars + " dolares") 
+print()
 
 
-#convertidor de dolares a pesos
+#Numero 5
+num = int(input("Write a num: "))
+if num > 5 :
+    print("Es mayor a 5 ")
+elif num == 5:
+    print("Es igual a 5")
 
-dollar = int (input("Escribe los dolares: "))
-value_Peso = .049
-
-pesos = dollar / value_Peso
-pesos = round(pesos,2)
-pesos = str(pesos)
-
-print("Tienes $"+ pesos + " pesos")
+else:
+    print("Es menor a 5")
