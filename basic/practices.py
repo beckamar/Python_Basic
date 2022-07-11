@@ -1,23 +1,37 @@
 
-#convertir de pesos a dolares 
+name = str(input("What is your name? "))
 
-peso = int (input("Escribe los pesos: "))
-value_Dollar = 20.53
+#Convierte todos los caracteres en mayusculas
+print (name.upper())
 
-dollars = peso / value_Dollar
-dollars = round(dollars, 2)
+#Convierte primer caracter en mayuscula
+print(name.capitalize())
 
-dollars = str(dollars)
-print("Tienes $"+dollars + " dolares") 
+#Sin embargo el valor de la variable despues de la funcion no se queda guarda ya que
+#si desoues decidimo imprimir solamente name éste aparecerá como se ingresó y no con 
+#los cambios que se le aplicaron en la función, por ello, la menra correcta de guardarlo 
+#es la siguiente:
 
 
-#convertidor de dolares a pesos
 
-dollar = int (input("Escribe los dolares: "))
-value_Peso = .049
+#Convierte todos los caracteres en mayusculas
+name = name.upper()
 
-pesos = dollar / value_Peso
-pesos = round(pesos,2)
-pesos = str(pesos)
+#Convierte primer caracter en mayuscula
+name = name.capitalize()
 
-print("Tienes $"+ pesos + " pesos")
+#Elimina espacios 
+name = name.strip()
+print(name)
+
+#Convierto todo a minisculas
+name = name.lower()
+print(name)
+
+#Cambia un caracter por otro, ejemplo 'a' por 'o'
+name = name.replace('a','o')
+print(name)
+
+#Muestra la letra del indice que indicamos
+name = name [0]
+print(name)
