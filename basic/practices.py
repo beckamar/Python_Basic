@@ -1,23 +1,12 @@
 
-#convertir de pesos a dolares 
+def run(num, rept):
+    if num <= rept:
+        cont = num
+        print(str(2 ** cont) )
+        run(num+1, rept)
+    else:
+        print("Fin!")
 
-peso = int (input("Escribe los pesos: "))
-value_Dollar = 20.53
-
-dollars = peso / value_Dollar
-dollars = round(dollars, 2)
-
-dollars = str(dollars)
-print("Tienes $"+dollars + " dolares") 
-
-
-#convertidor de dolares a pesos
-
-dollar = int (input("Escribe los dolares: "))
-value_Peso = .049
-
-pesos = dollar / value_Peso
-pesos = round(pesos,2)
-pesos = str(pesos)
-
-print("Tienes $"+ pesos + " pesos")
+if __name__ == "__main__":
+    repeticiones = int(input("Cuantas potencias: "))
+    run(0, repeticiones)
