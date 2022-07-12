@@ -1,31 +1,44 @@
+#(n-1)! + 1 es múltiplo de n
 
-def run():
+def fac(number):
+    
+    factorial = 1
+    for i in range(1, number):
+        factorial *= i
+    
+    factorial += 1
+    return factorial
 
-    LIMITE = 1000
-    contador = 0
-    potencia_2 = 2**contador
 
-    while potencia_2 < LIMITE:
-        print(str(potencia_2))
-        contador = contador +1
-        potencia_2 = 2**contador
+def determine():
+
+    number = int(input("Escribe un numero: "))
+    if number > 1:
+      if fac(number) % (number):
+          print("No es primo")
+      else:
+          print("Es primo")
+    else:
+        print()
+
 
 
 if __name__ == "__main__":
-    run()
+    determine()
 
 
 
 
 
-#def run(num, rept):
-#    if num <= rept:
-#        cont = num
-#        print(str(2 ** cont) )
-#        run(num+1, rept)
-#    else:
-#        print("Fin!")
+#def run():
+#    number = int(input('Escribe un numero: '))
+#    print('Es primo'if (isPrime(number)) else'No es primo')
 #
-#if __name__ == "__main__":
-#    repeticiones = int(input("Cuantas potencias: "))
-#    run(0, repeticiones)
+#def isPrime(num):
+#    return ((factorial(num - 1) + 1) % num) == 0ifnum > 1else False
+#
+#def factorial(num):
+#    return1ifnum <= 1else (num * factorial(num - 1))
+#
+#if __name__ == '__main__':
+#    run()
