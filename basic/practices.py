@@ -1,6 +1,9 @@
 
 #for ---> de un rango a otro
 
+from unittest import main
+
+
 for contador in range(0, 100):
     print(contador)
 
@@ -17,6 +20,28 @@ def runFor():
         print(caracter.upper())
 
 
+#break
+def runBreak():
+    for i in range(100):
+        print(i)
+        if i == 58:
+            break
+        #2
+    text = input("Escribe un texto: ")
+    for i in text:
+        if i == 'o':
+            break
+        print (i)
+
+
+#continue
+def runContinue():
+    for i in range(1,100):
+        if i % 2 != 0:
+            continue
+        print(i)
+
+
 #While
 def runWhile():
 
@@ -31,9 +56,10 @@ def runWhile():
 
 
 if __name__ == "__main__":
-    runWhile()
-    runFor()
-
+    #runWhile()
+    #runFor()
+    runContinue()
+    runBreak()
 
 
 
