@@ -1,4 +1,12 @@
 
+#for
+
+for contador in range(0, 100):
+    print(contador)
+
+
+
+#While
 def run():
 
     LIMITE = 1000
@@ -7,7 +15,7 @@ def run():
 
     while potencia_2 < LIMITE:
         print(str(potencia_2))
-        contador = contador +1
+        contador +=1
         potencia_2 = 2**contador
 
 
