@@ -1,13 +1,24 @@
 
-#for
+#for ---> de un rango a otro
 
 for contador in range(0, 100):
     print(contador)
 
 
+#for ----> Con String
+def runFor():
+    nombre = input("Escribe tu nombre: ")
+    for letra in nombre:
+        print(letra)
+
+    #2
+    frase = input("Escriba una frase: ")
+    for caracter in frase:
+        print(caracter.upper())
+
 
 #While
-def run():
+def runWhile():
 
     LIMITE = 1000
     contador = 0
@@ -20,7 +31,8 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    runWhile()
+    runFor()
 
 
 
