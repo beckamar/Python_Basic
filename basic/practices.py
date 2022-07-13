@@ -1,44 +1,22 @@
-#(n-1)! + 1 es múltiplo de n
+import random
 
-def fac(number):
-    
-    factorial = 1
-    for i in range(1, number):
-        factorial *= i
-    
-    factorial += 1
-    return factorial
+def run():
 
+    #Generará un numero aleatorio entre el 1 y el 100
+    numero_aleatorio = random.randint(1, 100)
+    numero_elegido = int(input("Elige un numero del 1 - 100: "))
 
-def determine():
+    while numero_elegido != numero_aleatorio:
 
-    number = int(input("Escribe un numero: "))
-    if number > 1:
-      if fac(number) % (number):
-          print("No es primo")
-      else:
-          print("Es primo")
-    else:
-        print()
+        if numero_elegido < numero_aleatorio:
+            print("Busca uno mas grande ")
+        else:
+            print("Busca uno mas pequeño ")
+        numero_elegido = int(input("Elige otro numero: "))
+
+    print("¡¡Felicidades!! lo has encontrado")
+        
 
 
-
-if __name__ == "__main__":
-    determine()
-
-
-
-
-
-#def run():
-#    number = int(input('Escribe un numero: '))
-#    print('Es primo'if (isPrime(number)) else'No es primo')
-#
-#def isPrime(num):
-#    return ((factorial(num - 1) + 1) % num) == 0ifnum > 1else False
-#
-#def factorial(num):
-#    return1ifnum <= 1else (num * factorial(num - 1))
-#
-#if __name__ == '__main__':
-#    run()
+if __name__ == '__main__':
+    run()
