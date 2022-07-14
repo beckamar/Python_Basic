@@ -4,7 +4,6 @@ import string
 
 def Generador_1():
     caracter = string.ascii_lowercase + string.digits + string.punctuation + string.ascii_uppercase
-
     contrasena = []
 
     while (len(contrasena) < 16):
@@ -14,7 +13,7 @@ def Generador_1():
     contrasena = "".join(contrasena)
     return contrasena
 
-def run():
+def run1():
     contrasena = Generador_1()
     print('Tu nueva contraseña es: '+ contrasena)
 
@@ -28,6 +27,24 @@ def Generador_2():
     CHARS = ['*', '+', '-', '/', '@', '_', '?', '!', '[', '{', '(', ')', '}', ']', ',', ';', '.', '>', '<', '~', '°', '^', '&', '$', '#', '"']
 
     caracteres = MAYUS + MINUS + NUMS + CHARS
+    contrasena = []
+
+    for i  in range(15):
+        #choice es un funcion especial del modulo random, nos ayuda elegir un caracter al azar de la lista que hicimos
+        #Ese caracter elegido se guarda dentro de la variable caracter_random 
+        caracter_random = random.choice(caracteres)
+        #Ahora hacemos un append para agregar el caracter elegido a la nueva lista
+        contrasena.append(caracter_random)
+    #Se convierte la lista en un String
+    contrasena = "".join(contrasena)
+    return contrasena
+
+
+def run2():
+    contrasena = Generador_2()
+    print('Tu nueva contraseña es: '+ contrasena)
+
 
 if __name__ == "__main__":
-    run()
+    run1()
+    run2()
